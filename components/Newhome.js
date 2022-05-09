@@ -59,7 +59,7 @@ const style = {
                             whileTap={{ scale: 0.8, rotate: 10, borderRadius: "100%" }}
                             >
                                 <Typography variant="h4" align="center">
-                                    click here
+                                    hello
                                 </Typography>
                             
                             </motion.div>
@@ -68,7 +68,7 @@ const style = {
             </Grid>
             <Grid item xs={12} md={6}>
                 <Link href="/about">
-                <img src="/cube.gif" width="100%" alt="error"></img>
+                <img src="/cube_small.gif" width="100%" alt="error"></img>
                 </Link>
             </Grid>
         </Grid>
