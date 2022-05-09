@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: "100%";
+    width: "100%";
 }
 
 a {
@@ -27,7 +28,7 @@ a {
   height: 300px;
 }
 
-.refresh {
+/* .refresh {
   padding: 10px;
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
@@ -40,4 +41,4 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
+} */
