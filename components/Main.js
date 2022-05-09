@@ -34,6 +34,9 @@ const style = {
                      <Typography variant="h4" align="center">
                         Welcome
                     </Typography>
+                    <Typography variant="body1" align="center">
+                        Hello
+                    </Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
