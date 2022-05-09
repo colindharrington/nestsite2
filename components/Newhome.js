@@ -33,7 +33,7 @@ const style = {
     const [count, setCount] = useState(0);
   return (
     <div>
-        <Grid container>
+        <Grid container spacing={6}>
             <Grid item xs={6}>
             <Box sx={{textAlign:"center"}}>
             <MotionConfig reducedMotion="user">
@@ -78,6 +78,18 @@ const style = {
                     </motion.div>
                 </Box>
             </Grid>
+            {/* <Grid item xs={12}>
+            <Box sx={{textAlign:"center", width: 300}}>
+            <motion.div
+                    className="container"
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8}}
+                    >
+            <img src="/cthru.png" width="100%" alt="error" onClick={handleOpen}></img>
+            </motion.div>
+            </Box>
+            </Grid> */}
+
         </Grid>
 
     </div>
