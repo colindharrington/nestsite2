@@ -20,7 +20,7 @@ const style = {
     textAlign:"center"
   };
 
-function Thehome() {
+ function Thehome() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
