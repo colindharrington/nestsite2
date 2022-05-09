@@ -1,6 +1,8 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { Typography, Grid , Button, Modal} from "@mui/material";
+import { Typography, Grid , Button, Modal, Stack} from "@mui/material";
+import { motion } from "framer-motion"
+import { useRef } from "react";
 
 
 import ReactAudioPlayer from 'react-audio-player';
@@ -24,6 +26,9 @@ const style = {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const constraintsRef = useRef(null);
+
   
   return (
     <div>
@@ -31,17 +36,35 @@ const style = {
             <Grid container>
                 <Grid item xs={12}>
                     <Box sx={{pb:4}}>
-                     <Typography variant="h4" align="center">
-                        Welcome
-                    </Typography>
-                    <Typography variant="body1" align="center">
-                        Hello
-                    </Typography>
+                    <motion.div
+                    className="container"
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
+                    >
+                        <Typography variant="h4" align="center">
+                            Welcome
+                        </Typography>
+                    </motion.div>
+                    <motion.div
+                    className="container"
+                    whileHover={{ scale: 1.2, rotate: -10 }}
+                    whileTap={{ scale: 0.8, rotate: 10, borderRadius: "100%" }}
+                    >
+                        <Typography variant="body1" align="center">
+                            hello
+                        </Typography>
+                    </motion.div>
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
-                    <Box sx={{cursor:"pointer",  border: '2px solid #000', width: "90%", ml:"5%"}}>
+                    <Box sx={{cursor:"pointer", width: "50%", ml:"25%"}}>
+                    <motion.div
+                    className="container"
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8}}
+                    >
                         <img src="/bonsai.jpg" width="100%" alt="error" onClick={handleOpen}></img>
+                    </motion.div>
                     </Box>
                     <Modal
                         open={open}
@@ -62,6 +85,24 @@ const style = {
                 </Grid>
             </Grid>
         </Box>
+
+<Box sx={{width: "70vw", backgroundColor:"grey", color:"white", p:5, borderRadius: 10, textAlign:"center", border: '5px solid #000', mt:10}}>
+    <Grid item xs={12}>
+        <Stack direction={"row"} spacing={10}>
+        <motion.div className="container2" ref={constraintsRef}>
+        <motion.div className="item2" drag dragConstraints={constraintsRef} >
+            <Typography variant="h2">
+                drag me
+            </Typography>
+        </motion.div>
+        </motion.div>
+        <Typography>
+            Web
+        </Typography>
+        </Stack>
+    </Grid>
+</Box>
+
     </div>
   );
 }
