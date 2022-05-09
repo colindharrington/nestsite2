@@ -59,7 +59,7 @@ const style = {
                             whileTap={{ scale: 0.8, rotate: 10, borderRadius: "100%" }}
                             >
                                 <Typography variant="h4" align="center">
-                                    hello
+                                    hi
                                 </Typography>
                             
                             </motion.div>

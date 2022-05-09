@@ -18,7 +18,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
       <pre>
-        Brought to you via the internet.
+        Brought to you by the internet.
       </pre>
       </footer>
     </div>
