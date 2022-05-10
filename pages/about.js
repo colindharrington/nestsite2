@@ -13,8 +13,8 @@ function About() {
 
   return (
     <div>
-      <Box sx={{ textAlign: "center", height: 1200, width: "100%", pt: 10 }}>
-        <Grid container spacing={6}>
+      <Box sx={{ textAlign: "center", height: 1200, width: "100%", pt: 3 }}>
+        <Grid container spacing={2}>
           <Grid item xs={12} md={12}>
             <Link href="/">
               <Button variant="outlined" color="secondary">
@@ -22,8 +22,22 @@ function About() {
               </Button>
             </Link>
           </Grid>
-          <Grid item xs={12} md={12}>
+          {/* <Grid item xs={12} md={12}>
             <Typography variant="h5">Welcome to this website</Typography>
+          </Grid> */}
+          <Grid item xs={12} md={4}>
+            <img src="/cube_small.gif" width="100%" alt="error"></img>
+            <Typography>Sounds</Typography>
+          </Grid>
+          <Link href="https://www.reddit.com/r/aphextwin/">
+            <Grid item xs={12} md={4}>
+              <img src="/cube_small.gif" width="100%" alt="error"></img>
+              <Typography>Reddit</Typography>
+            </Grid>
+          </Link>
+          <Grid item xs={12} md={4}>
+            <img src="/cube_small.gif" width="100%" alt="error"></img>
+            <Typography>Misc</Typography>
           </Grid>
         </Grid>
       </Box>
