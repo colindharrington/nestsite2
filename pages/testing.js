@@ -1,16 +1,7 @@
-// import React from "react";
-// import { useLoader } from "@react-three/fiber";
-// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import React from "react";
 
-// function testing() {
-//   const gltf = useLoader(GLTFLoader, "/exp.glb");
-//   return (
-//     <div>
-//       <Suspense fallback={null}>
-//         <primitive object={gltf.scene} />
-//       </Suspense>
-//     </div>
-//   );
-// }
+function testing() {
+  return <div>testing</div>;
+}
 
-// export default testing;
+export default testing;
