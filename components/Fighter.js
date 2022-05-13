@@ -39,12 +39,16 @@ function Fighter() {
     var size2 = "50%";
     var descript1 = "Squ∆r∑";
     var descript2 = "";
+    var title =
+      "A crystal or crystalline solid is a solid material whose constituents are arranged in a highly ordered microscopic structure, forming a crystal lattice that extends in all directions.";
   }
   if (value == 1) {
     var size1 = "50%";
     var size2 = "95%";
     var descript1 = "";
     var descript2 = "©ırÇ∫∑";
+    var title =
+      "A dagger is a fighting knife with a very sharp point and usually two sharp edges, typically designed or capable of being used as a thrusting or stabbing weapon.";
   }
 
   return (
@@ -57,36 +61,33 @@ function Fighter() {
         }}
       >
         <Grid container>
-          <Grid item xs={12}>
+          <Grid item xs={12} md={4}>
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{
                 type: "spring",
                 stiffness: 150,
                 damping: 30,
               }}
             >
-              <Stack direction={"column"}>
-                <Link href="/">
-                  <img src="/cube_small.gif" width="5%" alt="error"></img>
-                </Link>
-              </Stack>
-            </motion.div>
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 150,
-                damping: 30,
-              }}
-            >
-              <Chip label="Select Your Style" color="info" />
+              <Box
+                sx={{
+                  // position: "fixed",
+                  // top: 50,
+                  // left: 50,
+                  width: 300,
+                  textAlign: "left",
+                  ml: 3,
+                  mt: 3,
+                }}
+              >
+                <Typography variant="h4">Selected:</Typography>
+                {title}
+              </Box>
             </motion.div>
           </Grid>
-
-          <Grid item xs={12}>
+          <Grid item xs={12} md={4}>
             <Stack
               sx={{
                 width: "100%",
@@ -126,6 +127,35 @@ function Fighter() {
                 </Box>
               </motion.div>
             </Stack>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 30,
+              }}
+            >
+              <Stack direction={"column"}>
+                <Link href="/">
+                  <img src="/cube_small.gif" width="30%" alt="error"></img>
+                  <Typography color={"#000000"}>Home</Typography>
+                </Link>
+              </Stack>
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 30,
+              }}
+            >
+              {/* <Chip label="Select Your Style" color="info" /> */}
+            </motion.div>
           </Grid>
         </Grid>
         <Grid

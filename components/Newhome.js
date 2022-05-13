@@ -34,7 +34,7 @@ function Thehome() {
     <div>
       <Grid container spacing={0}>
         <Grid item xs={12} md={6}>
-          <Box sx={{ textAlign: "center", width: 400, pb: 10 }}>
+          <Box sx={{ textAlign: "center", width: 300, pb: 10 }}>
             <motion.div
               animate={{
                 scale: [0.9, 0.9, 1, 0.9, 0.9],
@@ -49,7 +49,7 @@ function Thehome() {
             >
               <motion.div
                 className="container"
-                whileHover={{ scale: 1.2, rotate: 10 }}
+                whileHover={{ scale: 1, rotate: 10 }}
                 whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
               >
                 <Typography variant="h2" align="center">
