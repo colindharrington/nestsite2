@@ -7,6 +7,7 @@ import { render } from "react-dom";
 import { motion, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import ReactAudioPlayer from "react-audio-player";
+import chalk from "chalk";
 
 const style = {
   position: "absolute",
@@ -29,6 +30,48 @@ function Thehome() {
   const handleClose = () => setOpen(false);
 
   console.log("SGVsbG8K, 0x48656C6C6F");
+  console.log("");
+  console.log(
+    chalk.bgBlue("* * * * * * * * * * ") +
+      chalk.bgRed("                         ")
+  );
+  console.log(
+    chalk.bgBlue(" * * * * * * * * *  ") +
+      chalk.bgWhiteBright("                         ")
+  );
+  console.log(
+    chalk.bgBlue("* * * * * * * * * * ") +
+      chalk.bgRed("                         ")
+  );
+  console.log(
+    chalk.bgBlue(" * * * * * * * * *  ") +
+      chalk.bgWhiteBright("                         ")
+  );
+  console.log(
+    chalk.bgBlue("* * * * * * * * * * ") +
+      chalk.bgRed("                         ")
+  );
+  console.log(
+    chalk.bgBlue(" * * * * * * * * *  ") +
+      chalk.bgWhiteBright("                         ")
+  );
+  console.log(
+    chalk.bgBlue("* * * * * * * * * * ") +
+      chalk.bgRed("                         ")
+  );
+  console.log(
+    chalk.bgWhiteBright("                                             ")
+  );
+  console.log(chalk.bgRed("                                             "));
+  console.log(
+    chalk.bgWhiteBright("                                             ")
+  );
+  console.log(chalk.bgRed("                                             "));
+  console.log(
+    chalk.bgWhiteBright("                                             ")
+  );
+  console.log(chalk.bgRed("                                             "));
+  console.log("");
 
   return (
     <div>
