@@ -7,7 +7,7 @@ import MainMenu from "../components/MainMenu";
 function testing() {
   return (
     <div className="fighter">
-      <MainMenu />
+      {/* <MainMenu /> */}
       <Box
         sx={{
           textAlign: "center",
@@ -21,7 +21,7 @@ function testing() {
           </Link>
         </Box>
         <Fighter />
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <Stack
             sx={{
               width: "100%",
@@ -31,7 +31,7 @@ function testing() {
           >
             <FightersMenu />
           </Stack>
-        </Grid>
+        </Grid> */}
       </Box>
     </div>
   );
