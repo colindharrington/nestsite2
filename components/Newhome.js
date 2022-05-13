@@ -6,6 +6,7 @@ import { useState } from "react";
 import { render } from "react-dom";
 import { motion, MotionConfig } from "framer-motion";
 import Link from "next/link";
+import ReactAudioPlayer from "react-audio-player";
 
 const style = {
   position: "absolute",
@@ -23,6 +24,10 @@ const style = {
 };
 
 function Thehome() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div>
       <Grid container spacing={0}>
@@ -75,7 +80,37 @@ function Thehome() {
                 damping: 10,
               }}
             >
-              Hello
+              <motion.div
+                animate={{
+                  scale: [0.9, 1, 1, 0.9, 0.9],
+                }}
+                transition={{
+                  duration: 4,
+                  ease: "easeInOut",
+                  times: [0, 0.2, 0.5, 0.8, 1],
+                  repeat: Infinity,
+                  repeatDelay: 1,
+                }}
+              >
+                <Typography onClick={handleOpen}>Hello</Typography>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography
+                      id="modal-modal-title"
+                      variant="h6"
+                      component="h2"
+                    >
+                      Hexdump to find data
+                    </Typography>
+                    <ReactAudioPlayer src="/final.mp3" autoPlay controls />
+                  </Box>
+                </Modal>
+              </motion.div>
             </motion.div>
 
             {/* 
@@ -95,7 +130,7 @@ function Thehome() {
         <Grid item xs={12} md={6}>
           <Box sx={{ cursor: "pointer" }}>
             <Link href="/testing">
-              <img src="/cube_small.gif" width="100%" alt="error"></img>
+              <img src="/skycube.gif" width="100%" alt="error"></img>
             </Link>
           </Box>
         </Grid>

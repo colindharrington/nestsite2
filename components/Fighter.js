@@ -34,21 +34,21 @@ function Fighter() {
   }, [selectedFighter]);
 
   if (value == 0) {
-    var size1 = "90%";
-    var size2 = "80%";
+    var size1 = "80%";
+    var size2 = "50%";
     var descript1 = "Squ∆r∑";
     var descript2 = "";
   }
   if (value == 1) {
-    var size1 = "80%";
-    var size2 = "90%";
+    var size1 = "50%";
+    var size2 = "95%";
     var descript1 = "";
     var descript2 = "©ırÇ∫∑";
   }
 
   return (
     <div>
-      <Box sx={{ width: "90%", ml: "5%" }}>
+      <Box sx={{ width: "100vw", height: "100vh", bgcolor: "black" }}>
         <Grid container>
           <Grid item xs={12}>
             <Link href="/">
@@ -63,11 +63,15 @@ function Fighter() {
                 alignItems: "center",
               }}
             >
-              <Box sx={{ width: 300, padding: 2 }}>
+              <Box
+                sx={{
+                  width: 300,
+                  padding: 2,
+                }}
+              >
                 <BottomNavigation
                   sx={{
-                    // bgcolor: "#000000",
-                    // color: "#ffffff",
+                    bgcolor: "#000000",
                     borderRadius: 10,
                   }}
                   showLabels
@@ -103,7 +107,9 @@ function Fighter() {
               >
                 <img src="/crystal.gif" width={size1} alt="error"></img>
               </Button>
-              <Typography variant="h6">{descript1}</Typography>
+              {/* <Typography variant="h6" color="primary">
+                {descript1}
+              </Typography> */}
             </Box>
             {/* </motion.div> */}
           </Grid>
@@ -125,7 +131,9 @@ function Fighter() {
               >
                 <img src="/dagger.gif" width={size2} alt="error"></img>
               </Button>
-              <Typography variant="h6">{descript2}</Typography>
+              {/* <Typography variant="h6" color="primary">
+                {descript2}
+              </Typography> */}
             </Box>
             {/* </motion.div> */}
           </Grid>
