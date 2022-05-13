@@ -28,6 +28,8 @@ function Thehome() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  console.log("SGVsbG8K, 0x48656C6C6F");
+
   return (
     <div>
       <Grid container spacing={0}>
@@ -70,9 +72,8 @@ function Thehome() {
             >
               <Box sx={{ width: "100%", height: 5, bgcolor: "black" }}></Box>
             </motion.div>
-            <br />
             <motion.div
-              initial={{ scale: 2 }}
+              initial={{ scale: 3 }}
               animate={{ scale: 1 }}
               transition={{
                 type: "spring",
@@ -92,7 +93,11 @@ function Thehome() {
                   repeatDelay: 1,
                 }}
               >
-                <Typography onClick={handleOpen}>Hello</Typography>
+                <Box sx={{ cursor: "pointer", mt: 1 }}>
+                  <Typography variant="h4" onClick={handleOpen}>
+                    {"(: :)"}
+                  </Typography>
+                </Box>
                 <Modal
                   open={open}
                   onClose={handleClose}
@@ -128,11 +133,21 @@ function Thehome() {
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box sx={{ cursor: "pointer" }}>
-            <Link href="/testing">
-              <img src="/skycube.gif" width="100%" alt="error"></img>
-            </Link>
-          </Box>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 60,
+            }}
+          >
+            <Box sx={{ cursor: "pointer" }}>
+              <Link href="/testing">
+                <img src="/skycube.gif" width="100%" alt="error"></img>
+              </Link>
+            </Box>
+          </motion.div>
         </Grid>
       </Grid>
     </div>

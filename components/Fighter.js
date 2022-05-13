@@ -14,6 +14,7 @@ import {
   BottomNavigationAction,
   Stack,
   Link,
+  Chip,
 } from "@mui/material";
 import * as React from "react";
 import { motion } from "framer-motion";
@@ -48,13 +49,43 @@ function Fighter() {
 
   return (
     <div>
-      <Box sx={{ width: "100vw", height: "100vh", bgcolor: "black" }}>
+      <Box
+        sx={{
+          width: "100vw",
+          height: "100vh",
+          // background: "linear-gradient( #222222,#000000, #222222)",
+        }}
+      >
         <Grid container>
           <Grid item xs={12}>
-            <Link href="/">
-              <img src="/cube_small.gif" width="5%" alt="error"></img>
-            </Link>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 30,
+              }}
+            >
+              <Stack direction={"column"}>
+                <Link href="/">
+                  <img src="/cube_small.gif" width="5%" alt="error"></img>
+                </Link>
+              </Stack>
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 30,
+              }}
+            >
+              <Chip label="Select Your Style" color="info" />
+            </motion.div>
           </Grid>
+
           <Grid item xs={12}>
             <Stack
               sx={{
@@ -63,82 +94,96 @@ function Fighter() {
                 alignItems: "center",
               }}
             >
-              <Box
-                sx={{
-                  width: 300,
-                  padding: 2,
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 150,
+                  damping: 30,
                 }}
               >
-                <BottomNavigation
+                <Box
                   sx={{
-                    bgcolor: "#000000",
-                    borderRadius: 10,
-                  }}
-                  showLabels
-                  value={value}
-                  onChange={(event, newValue) => {
-                    setValue(newValue);
+                    width: 300,
+                    padding: 2,
                   }}
                 >
-                  <BottomNavigationAction label="Magic" />
-                  <BottomNavigationAction label="Blade" />
-                </BottomNavigation>
-                {/* <Typography>{selectedFighter}</Typography> */}
-              </Box>
+                  <BottomNavigation
+                    sx={{
+                      // bgcolor: "#000000",
+                      borderRadius: 10,
+                    }}
+                    showLabels
+                    value={value}
+                    onChange={(event, newValue) => {
+                      setValue(newValue);
+                    }}
+                  >
+                    <BottomNavigationAction label="Magic" />
+                    <BottomNavigationAction label="Blade" />
+                  </BottomNavigation>
+                </Box>
+              </motion.div>
             </Stack>
           </Grid>
         </Grid>
-        <Grid container spacing={1}>
+        <Grid
+          container
+          spacing={1}
+          sx={{ display: "flex", alignItems: "center" }}
+        >
           <Grid item xs={12} md={6}>
-            {/* <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{
-                scale: 0.8,
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 30,
               }}
-            > */}
-            <Box width={"100%"}>
-              <Button
-                disableRipple
-                value={1}
-                onClick={(event, newValue) => {
-                  setValue(0);
-                  console.log(value);
-                }}
-              >
-                <img src="/crystal.gif" width={size1} alt="error"></img>
-              </Button>
-              {/* <Typography variant="h6" color="primary">
-                {descript1}
-              </Typography> */}
-            </Box>
-            {/* </motion.div> */}
+            >
+              <Box width={"100%"}>
+                <Button
+                  disableRipple
+                  value={1}
+                  onClick={(event, newValue) => {
+                    setValue(0);
+                  }}
+                  style={{ backgroundColor: "transparent" }}
+                >
+                  <img src="/crystal.gif" width={size1} alt="error"></img>
+                </Button>
+              </Box>
+            </motion.div>
           </Grid>
           <Grid item xs={12} md={6}>
-            {/* <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{
-                scale: 0.8,
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 30,
               }}
-            > */}
-            <Box width={"100%"}>
-              <Button
-                disableRipple
-                value={0}
-                onClick={(event, newValue) => {
-                  setValue(1);
-                  console.log(value);
-                }}
-              >
-                <img src="/dagger.gif" width={size2} alt="error"></img>
-              </Button>
-              {/* <Typography variant="h6" color="primary">
-                {descript2}
-              </Typography> */}
-            </Box>
-            {/* </motion.div> */}
+            >
+              <Box width={"100%"}>
+                <Button
+                  disableRipple
+                  value={0}
+                  onClick={(event, newValue) => {
+                    setValue(1);
+                  }}
+                  style={{ backgroundColor: "transparent" }}
+                >
+                  <img src="/dagger.gif" width={size2} alt="error"></img>
+                </Button>
+              </Box>
+            </motion.div>
           </Grid>
         </Grid>
       </Box>
+      {/* </Box> */}
     </div>
   );
 }
