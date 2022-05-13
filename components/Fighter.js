@@ -33,14 +33,14 @@ function Fighter() {
   }, [selectedFighter]);
 
   if (value == 0) {
-    var size1 = "70%";
-    var size2 = "40%";
+    var size1 = "80%";
+    var size2 = "60%";
     var descript1 = "Squ∆r∑";
     var descript2 = "";
   }
   if (value == 1) {
-    var size1 = "40%";
-    var size2 = "70%";
+    var size1 = "60%";
+    var size2 = "80%";
     var descript1 = "";
     var descript2 = "©ırÇ∫∑";
   }
