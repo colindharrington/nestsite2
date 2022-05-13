@@ -14,9 +14,9 @@ export default function Home() {
         <Newhome />
       </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <pre>Brought to you by the internet.</pre>
-      </footer>
+      </footer> */}
     </div>
   );
 }

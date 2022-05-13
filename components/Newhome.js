@@ -51,7 +51,7 @@ function Thehome() {
               </motion.div>
             </motion.div>
 
-            <Link href="/about">
+            <Link href="/testing">
               <motion.div
                 className="container"
                 whileHover={{ scale: 1.1, rotate: -10 }}
@@ -65,7 +65,7 @@ function Thehome() {
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Link href="/about">
+          <Link href="/testing">
             <img src="/cube_small.gif" width="100%" alt="error"></img>
           </Link>
         </Grid>
