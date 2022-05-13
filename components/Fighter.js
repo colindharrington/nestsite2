@@ -37,7 +37,7 @@ function Fighter() {
     <div>
       <Box sx={{ width: "90%", ml: "5%" }}>
         <Grid container spacing={1}>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <motion.div
               whileHover={{ scale: 1.2 }}
               whileTap={{
@@ -51,7 +51,7 @@ function Fighter() {
               </Box>
             </motion.div>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <motion.div
               whileHover={{ scale: 1.2 }}
               whileTap={{
