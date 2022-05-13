@@ -32,17 +32,17 @@ function Fighter() {
     setSelectedFighter(selectedFighter);
   }, [selectedFighter]);
 
-  if (value == 1) {
-    var size1 = "100%";
-    var size2 = "80%";
-    var descript1 = "";
-    var descript2 = "Squ∆r∑";
-  }
   if (value == 0) {
-    var size1 = "80%";
-    var size2 = "100%";
-    var descript1 = "©ırÇ∫∑";
+    var size1 = "70%";
+    var size2 = "40%";
+    var descript1 = "Squ∆r∑";
     var descript2 = "";
+  }
+  if (value == 1) {
+    var size1 = "40%";
+    var size2 = "70%";
+    var descript1 = "";
+    var descript2 = "©ırÇ∫∑";
   }
 
   return (
@@ -57,7 +57,15 @@ function Fighter() {
               }}
             > */}
             <Box width={"100%"}>
-              <img src="/circleFighter.gif" width={size1} alt="error"></img>
+              <Button
+                value={1}
+                onClick={(event, newValue) => {
+                  setValue(0);
+                  console.log(value);
+                }}
+              >
+                <img src="/circleFighter.gif" width={size1} alt="error"></img>
+              </Button>
               <Typography variant="h6">{descript1}</Typography>
             </Box>
             {/* </motion.div> */}
@@ -70,7 +78,15 @@ function Fighter() {
               }}
             > */}
             <Box width={"100%"}>
-              <img src="/squareFighter.gif" width={size2} alt="error"></img>
+              <Button
+                value={0}
+                onClick={(event, newValue) => {
+                  setValue(1);
+                  console.log(value);
+                }}
+              >
+                <img src="/squareFighter.gif" width={size2} alt="error"></img>
+              </Button>
               <Typography variant="h6">{descript2}</Typography>
             </Box>
             {/* </motion.div> */}
