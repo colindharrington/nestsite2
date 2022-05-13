@@ -24,7 +24,6 @@ function Fighter() {
   const [value, setValue] = React.useState(0);
   const [selectedFighter, setSelectedFighter] = useState();
 
-  console.log(value);
   const onChangeStatus = (selectedFighter) => {
     setSelectedFighter(selectedFighter);
   };
@@ -33,37 +32,48 @@ function Fighter() {
     setSelectedFighter(selectedFighter);
   }, [selectedFighter]);
 
+  if (value == 1) {
+    var size1 = "100%";
+    var size2 = "80%";
+    var descript1 = "";
+    var descript2 = "Squ∆r∑";
+  }
+  if (value == 0) {
+    var size1 = "80%";
+    var size2 = "100%";
+    var descript1 = "©ırÇ∫∑";
+    var descript2 = "";
+  }
+
   return (
     <div>
       <Box sx={{ width: "90%", ml: "5%" }}>
         <Grid container spacing={1}>
           <Grid item xs={12} md={6}>
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.2 }}
               whileTap={{
                 scale: 0.8,
               }}
-            >
-              <Box width={"100%"}>
-                <Button value={value} onClick={setValue}>
-                  <img src="/circleFighter.gif" width="100%" alt="error"></img>
-                </Button>
-              </Box>
-            </motion.div>
+            > */}
+            <Box width={"100%"}>
+              <img src="/circleFighter.gif" width={size1} alt="error"></img>
+              <Typography variant="h6">{descript1}</Typography>
+            </Box>
+            {/* </motion.div> */}
           </Grid>
           <Grid item xs={12} md={6}>
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.2 }}
               whileTap={{
                 scale: 0.8,
               }}
-            >
-              <Box width={"100%"}>
-                <Button value={value} onClick={setValue}>
-                  <img src="/squareFighter.gif" width="100%" alt="error"></img>
-                </Button>
-              </Box>
-            </motion.div>
+            > */}
+            <Box width={"100%"}>
+              <img src="/squareFighter.gif" width={size2} alt="error"></img>
+              <Typography variant="h6">{descript2}</Typography>
+            </Box>
+            {/* </motion.div> */}
           </Grid>
         </Grid>
         <Grid container>
@@ -78,8 +88,8 @@ function Fighter() {
               <Box sx={{ width: 300, padding: 2 }}>
                 <BottomNavigation
                   sx={{
-                    bgcolor: "#000000",
-                    color: "#ffffff",
+                    // bgcolor: "#000000",
+                    // color: "#ffffff",
                     borderRadius: 10,
                   }}
                   showLabels
@@ -88,7 +98,7 @@ function Fighter() {
                     setValue(newValue);
                   }}
                 >
-                  <BottomNavigationAction label={squrrel} />
+                  <BottomNavigationAction label="circle" />
                   <BottomNavigationAction label="square" />
                 </BottomNavigation>
                 {/* <Typography>{selectedFighter}</Typography> */}

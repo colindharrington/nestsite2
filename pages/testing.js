@@ -1,4 +1,12 @@
-import { Box, Grid, Link, Menu, Stack, Button } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Link,
+  Menu,
+  Stack,
+  Button,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import Fighter from "../components/Fighter";
 import FightersMenu from "../components/FightersMenu";
@@ -8,18 +16,16 @@ function testing() {
   return (
     <div className="fighter">
       {/* <MainMenu /> */}
+      <Box sx={{ position: "fixed", top: 50, left: 50, zIndex: 1 }}>
+        <Link href="/">
+          <img src="/cube_small.gif" width="10%" alt="error"></img>
+        </Link>
+      </Box>
       <Box
         sx={{
           textAlign: "center",
         }}
       >
-        <Box sx={{ position: "fixed", top: 50, left: 50, zIndex: 1 }}>
-          <Link href="/">
-            <Button variant="outlined" color="primary">
-              Home
-            </Button>
-          </Link>
-        </Box>
         <Fighter />
         {/* <Grid item xs={12}>
           <Stack

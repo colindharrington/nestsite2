@@ -51,6 +51,22 @@ function Thehome() {
               </motion.div>
             </motion.div>
 
+            <motion.div
+              animate={{
+                scale: [0.6, 0.6, 0.5, 0.5, 0.6],
+              }}
+              transition={{
+                duration: 4,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+            >
+              <Box sx={{ width: "100%", height: 5, bgcolor: "black" }}></Box>
+            </motion.div>
+
+            {/* 
             <Link href="/testing">
               <motion.div
                 className="container"
@@ -61,13 +77,15 @@ function Thehome() {
                   hi
                 </Typography>
               </motion.div>
-            </Link>
+            </Link> */}
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Link href="/testing">
-            <img src="/cube_small.gif" width="100%" alt="error"></img>
-          </Link>
+          <Box sx={{ cursor: "pointer" }}>
+            <Link href="/testing">
+              <img src="/cube_small.gif" width="100%" alt="error"></img>
+            </Link>
+          </Box>
         </Grid>
       </Grid>
     </div>
