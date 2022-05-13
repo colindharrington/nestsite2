@@ -65,6 +65,18 @@ function Thehome() {
             >
               <Box sx={{ width: "100%", height: 5, bgcolor: "black" }}></Box>
             </motion.div>
+            <br />
+            <motion.div
+              initial={{ scale: 2 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 10,
+              }}
+            >
+              Hello
+            </motion.div>
 
             {/* 
             <Link href="/testing">

@@ -16,11 +16,6 @@ function testing() {
   return (
     <div className="fighter">
       {/* <MainMenu /> */}
-      <Box sx={{ position: "fixed", top: 50, left: 50, zIndex: 1 }}>
-        <Link href="/">
-          <img src="/cube_small.gif" width="10%" alt="error"></img>
-        </Link>
-      </Box>
       <Box
         sx={{
           textAlign: "center",
