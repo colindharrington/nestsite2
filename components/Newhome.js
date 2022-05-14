@@ -56,7 +56,7 @@ function Thehome() {
                 whileHover={{ scale: 1, rotate: 10 }}
                 whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
               >
-                <Link href="/testing">
+                <Link href="/about">
                   <Typography variant="h2" align="center">
                     Welcome
                   </Typography>
@@ -150,7 +150,7 @@ function Thehome() {
             }}
           >
             <Box sx={{ cursor: "pointer" }}>
-              <Link href="/about">
+              <Link href="/testing">
                 <img src="/skycube.gif" width="100%" alt="error"></img>
               </Link>
             </Box>
