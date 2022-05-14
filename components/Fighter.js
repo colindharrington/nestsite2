@@ -51,7 +51,6 @@ function Fighter() {
         sx={{
           width: "100vw",
           height: "100vh",
-          // background: "linear-gradient( #222222,#000000, #222222)",
         }}
       >
         <Grid container>
@@ -67,9 +66,6 @@ function Fighter() {
             >
               <Box
                 sx={{
-                  // position: "fixed",
-                  // top: 50,
-                  // left: 50,
                   width: 300,
                   textAlign: "left",
                   ml: 3,
@@ -122,7 +118,7 @@ function Fighter() {
               </motion.div>
             </Stack>
           </Grid>
-          <Grid item xs={12} md={2}>
+          {/* <Grid item xs={12} md={2}>
             {" "}
             <Link href="/">
               <Button>Home</Button>
@@ -132,6 +128,29 @@ function Fighter() {
             <Link href="/about">
               <Button>About</Button>
             </Link>
+          </Grid> */}
+          <Grid item xs={6} md={2}>
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 60,
+              }}
+            >
+              <Box
+                sx={{
+                  cursor: "pointer",
+                  mt: 5,
+                  width: "100%",
+                }}
+              >
+                <Link href="/">
+                  <img src="/skycube.gif" width="30%" alt="error"></img>
+                </Link>
+              </Box>
+            </motion.div>
           </Grid>
         </Grid>
         <Grid

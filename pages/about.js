@@ -15,6 +15,19 @@ function About() {
     <div>
       <Box sx={{ textAlign: "center", height: 1200, width: "100%", pt: 3 }}>
         <Grid container spacing={1}>
+          <Grid item xs={12} md={12}>
+            <motion.div
+              initial={{ scale: 0.1 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 30,
+              }}
+            >
+              <img src="/bonsai.gif" width={600} alt="error"></img>
+            </motion.div>
+          </Grid>
           <Grid item xs={12} md={6}>
             <Link href="/">
               <Button variant="outlined" color="secondary">
@@ -29,7 +42,6 @@ function About() {
               </Button>
             </Link>
           </Grid>
-
           <Grid item xs={12} md={12}>
             <motion.div
               initial={{ scale: 0.1 }}
@@ -40,7 +52,9 @@ function About() {
                 damping: 30,
               }}
             >
-              <img src="/skycube.gif" width="100vw" alt="error"></img>
+              <Link href="/">
+                <img src="/skycube.gif" width="100vw" alt="error"></img>
+              </Link>
             </motion.div>
           </Grid>
         </Grid>
