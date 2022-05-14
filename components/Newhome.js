@@ -7,7 +7,6 @@ import { render } from "react-dom";
 import { motion, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import ReactAudioPlayer from "react-audio-player";
-import chalk from "chalk";
 
 const style = {
   position: "absolute",
@@ -29,49 +28,11 @@ function Thehome() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  console.log("SGVsbG8K, 0x48656C6C6F");
-  console.log("");
   console.log(
-    chalk.bgBlue("* * * * * * * * * * ") +
-      chalk.bgRed("                         ")
+    "%cSGVsbG8K, 48656C6C6F",
+    // "color:red;font-family:system-ui;font-size:4rem;-webkit-text-stroke: 10px black;font-weight:bold"
+    "color: -webkit-linear-gradient(#fff, #000,#fff);font-family:system-ui;font-size:4rem;font-weight:bold;background: -webkit-linear-gradient(#000, #fff,#000);padding:50px;"
   );
-  console.log(
-    chalk.bgBlue(" * * * * * * * * *  ") +
-      chalk.bgWhiteBright("                         ")
-  );
-  console.log(
-    chalk.bgBlue("* * * * * * * * * * ") +
-      chalk.bgRed("                         ")
-  );
-  console.log(
-    chalk.bgBlue(" * * * * * * * * *  ") +
-      chalk.bgWhiteBright("                         ")
-  );
-  console.log(
-    chalk.bgBlue("* * * * * * * * * * ") +
-      chalk.bgRed("                         ")
-  );
-  console.log(
-    chalk.bgBlue(" * * * * * * * * *  ") +
-      chalk.bgWhiteBright("                         ")
-  );
-  console.log(
-    chalk.bgBlue("* * * * * * * * * * ") +
-      chalk.bgRed("                         ")
-  );
-  console.log(
-    chalk.bgWhiteBright("                                             ")
-  );
-  console.log(chalk.bgRed("                                             "));
-  console.log(
-    chalk.bgWhiteBright("                                             ")
-  );
-  console.log(chalk.bgRed("                                             "));
-  console.log(
-    chalk.bgWhiteBright("                                             ")
-  );
-  console.log(chalk.bgRed("                                             "));
-  console.log("");
 
   return (
     <div>
@@ -95,9 +56,12 @@ function Thehome() {
                 whileHover={{ scale: 1, rotate: 10 }}
                 whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
               >
-                <Typography variant="h2" align="center">
-                  Welcome
-                </Typography>
+                <Link href="/about">
+                  <Typography variant="h2" align="center">
+                    Welcome
+                  </Typography>
+                  {/* <Button> Welcome</Button> */}
+                </Link>
               </motion.div>
             </motion.div>
 

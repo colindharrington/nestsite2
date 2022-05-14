@@ -13,14 +13,12 @@ import {
   BottomNavigation,
   BottomNavigationAction,
   Stack,
-  Link,
   Chip,
+  Link,
 } from "@mui/material";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
-let squrrel = "shit";
 
 function Fighter() {
   const [value, setValue] = React.useState(0);
@@ -37,16 +35,12 @@ function Fighter() {
   if (value == 0) {
     var size1 = "80%";
     var size2 = "50%";
-    var descript1 = "Squ∆r∑";
-    var descript2 = "";
     var title =
       "A crystal or crystalline solid is a solid material whose constituents are arranged in a highly ordered microscopic structure, forming a crystal lattice that extends in all directions.";
   }
   if (value == 1) {
     var size1 = "50%";
     var size2 = "95%";
-    var descript1 = "";
-    var descript2 = "©ırÇ∫∑";
     var title =
       "A dagger is a fighting knife with a very sharp point and usually two sharp edges, typically designed or capable of being used as a thrusting or stabbing weapon.";
   }
@@ -128,34 +122,16 @@ function Fighter() {
               </motion.div>
             </Stack>
           </Grid>
-          <Grid item xs={12} md={4}>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 150,
-                damping: 30,
-              }}
-            >
-              <Stack direction={"column"}>
-                <Link href="/">
-                  <img src="/cube_small.gif" width="30%" alt="error"></img>
-                  <Typography color={"#000000"}>Home</Typography>
-                </Link>
-              </Stack>
-            </motion.div>
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 150,
-                damping: 30,
-              }}
-            >
-              {/* <Chip label="Select Your Style" color="info" /> */}
-            </motion.div>
+          <Grid item xs={12} md={2}>
+            {" "}
+            <Link href="/">
+              <Button>Home</Button>
+            </Link>
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <Link href="/about">
+              <Button>About</Button>
+            </Link>
           </Grid>
         </Grid>
         <Grid

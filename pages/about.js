@@ -14,30 +14,34 @@ function About() {
   return (
     <div>
       <Box sx={{ textAlign: "center", height: 1200, width: "100%", pt: 3 }}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={12}>
+        <Grid container spacing={1}>
+          <Grid item xs={12} md={6}>
             <Link href="/">
               <Button variant="outlined" color="secondary">
                 Back
               </Button>
             </Link>
           </Grid>
-          {/* <Grid item xs={12} md={12}>
-            <Typography variant="h5">Welcome to this website</Typography>
-          </Grid> */}
-          <Grid item xs={12} md={4}>
-            <img src="/cube_small.gif" width="100%" alt="error"></img>
-            <Typography>Sounds</Typography>
+          <Grid item xs={12} md={6}>
+            <Link href="/testing">
+              <Button variant="outlined" color="secondary">
+                Select
+              </Button>
+            </Link>
           </Grid>
-          <Link href="https://www.reddit.com/r/aphextwin/">
-            <Grid item xs={12} md={4}>
-              <img src="/cube_small.gif" width="100%" alt="error"></img>
-              <Typography>Reddit</Typography>
-            </Grid>
-          </Link>
-          <Grid item xs={12} md={4}>
-            <img src="/cube_small.gif" width="100%" alt="error"></img>
-            <Typography>Misc</Typography>
+
+          <Grid item xs={12} md={12}>
+            <motion.div
+              initial={{ scale: 0.1 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 30,
+              }}
+            >
+              <img src="/skycube.gif" width="100vw" alt="error"></img>
+            </motion.div>
           </Grid>
         </Grid>
       </Box>
