@@ -17,12 +17,12 @@ function About() {
         <Grid container spacing={1}>
           <Grid item xs={12} md={12}>
             <motion.div
-              initial={{ scale: 0.1 }}
+              initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               transition={{
                 type: "spring",
-                stiffness: 150,
-                damping: 30,
+                stiffness: 250,
+                damping: 60,
               }}
             >
               <img src="/bonsai.gif" width={600} alt="error"></img>
