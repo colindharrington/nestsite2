@@ -9,22 +9,10 @@ export default function Home() {
         <title> * ˚∆˙ *</title>
 
         <meta name="title" content="* ˚∆˙ *"></meta>
-        <meta name="description" content="skycube.gif"></meta>
-
-        <meta property="og:type" content="website"></meta>
-        <meta property="og:url" content="https://www.aphextwins.com/"></meta>
-        <meta property="og:title" content="* ˚∆˙ *"></meta>
-        <meta property="og:description" content="skycube.gif"></meta>
-        <meta property="og:image" content="skycube.gif"></meta>
-
-        <meta property="twitter:card" content="summary_large_image"></meta>
         <meta
-          property="twitter:url"
-          content="https://www.aphextwins.com/"
-        ></meta>
-        <meta property="twitter:title" content="* ˚∆˙ *"></meta>
-        <meta property="twitter:description" content="skycube.gif"></meta>
-        <meta property="twitter:image" content="skycube.gif"></meta>
+          property="og:image"
+          content="https://aphextwins.com/public/skycube.gif"
+        />
       </Head>
       <main className={styles.main}>
         <Newhome />
