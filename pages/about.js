@@ -1,14 +1,22 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 import { Box } from "@mui/system";
-import { Typography, Grid, Button, Modal, Stack } from "@mui/material";
+import {
+  Typography,
+  Grid,
+  Button,
+  Modal,
+  Stack,
+  Skeleton,
+} from "@mui/material";
 import { MotionConfig } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { isMobile } from "react-device-detect";
 
-function About() {
+function About(props) {
+  const { loading = false } = props;
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
 
@@ -27,14 +35,22 @@ function About() {
                   damping: 60,
                 }}
               >
-                <div>
-                  {" "}
-                  {isMobile ? (
-                    <img src="/bonsai.gif" width={200} alt="error"></img>
-                  ) : (
-                    <img src="/bonsai.gif" width={600} alt="error"></img>
-                  )}
-                </div>
+                {loading ? (
+                  <Skeleton
+                    variant="circular"
+                    width={200}
+                    height={200}
+                  ></Skeleton>
+                ) : (
+                  <div>
+                    {" "}
+                    {isMobile ? (
+                      <img src="/bonsai.gif" width={200} alt="error"></img>
+                    ) : (
+                      <img src="/bonsai.gif" width={600} alt="error"></img>
+                    )}
+                  </div>
+                )}
               </motion.div>
             </Grid>
           </Grid>
