@@ -72,6 +72,11 @@ function About(props) {
                 Select
               </Button>
             </Link>
+            <Link href="/video">
+              <Button variant="outlined" color="primary">
+                Video
+              </Button>
+            </Link>
           </Stack>
         </Grid>
         {/* <Grid item xs={12} md={12}>
