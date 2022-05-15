@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title> * ˚∆˙ *</title>
+        <title> ˚∆˚ </title>
 
         <meta name="title" content="* ˚∆˙ *"></meta>
         <meta

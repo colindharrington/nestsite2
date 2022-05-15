@@ -118,17 +118,6 @@ function Fighter() {
               </motion.div>
             </Stack>
           </Grid>
-          {/* <Grid item xs={12} md={2}>
-            {" "}
-            <Link href="/">
-              <Button>Home</Button>
-            </Link>
-          </Grid>
-          <Grid item xs={12} md={2}>
-            <Link href="/about">
-              <Button>About</Button>
-            </Link>
-          </Grid> */}
           <Grid item xs={6} md={2}>
             <motion.div
               initial={{ scale: 0 }}

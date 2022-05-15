@@ -13,36 +13,49 @@ function About() {
 
   return (
     <div>
-      <Box sx={{ textAlign: "center", height: 1200, width: "100%", pt: 3 }}>
-        <Grid container spacing={1}>
-          <Grid item xs={12} md={12}>
-            <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 250,
-                damping: 60,
-              }}
-            >
-              <img src="/bonsai.gif" width={600} alt="error"></img>
-            </motion.div>
+      <Box>
+        <Box sx={{ textAlign: "center", width: "100%" }}>
+          <Grid container spacing={1}>
+            <Grid item xs={12} md={12}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 250,
+                  damping: 60,
+                }}
+              >
+                <img
+                  src="/bonsai.gif"
+                  minWidth={300}
+                  maxWidth={600}
+                  alt="error"
+                ></img>
+              </motion.div>
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
+        </Box>
+        <Grid item xs={12} md={12}>
+          <Stack
+            direction={"row"}
+            justifyContent={"space-around"}
+            alignItems={"center"}
+          >
             <Link href="/">
               <Button variant="outlined" color="secondary">
                 Back
               </Button>
             </Link>
-          </Grid>
-          <Grid item xs={12} md={6}>
+
             <Link href="/testing">
               <Button variant="outlined" color="secondary">
                 Select
               </Button>
             </Link>
-          </Grid>
-          <Grid item xs={12} md={12}>
+          </Stack>
+        </Grid>
+        {/* <Grid item xs={12} md={12}>
             <motion.div
               initial={{ scale: 0.1 }}
               animate={{ scale: 1 }}
@@ -56,8 +69,7 @@ function About() {
                 <img src="/skycube.gif" width="100vw" alt="error"></img>
               </Link>
             </motion.div>
-          </Grid>
-        </Grid>
+          </Grid> */}
       </Box>
     </div>
   );

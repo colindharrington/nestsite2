@@ -80,8 +80,8 @@ function Thehome() {
               <Box sx={{ width: "100%", height: 5, bgcolor: "black" }}></Box>
             </motion.div>
             <motion.div
-              initial={{ scale: 3 }}
-              animate={{ scale: 1 }}
+              initial={{ opacity: 3 }}
+              animate={{ opacity: 1 }}
               transition={{
                 type: "spring",
                 stiffness: 150,
@@ -141,8 +141,8 @@ function Thehome() {
         </Grid>
         <Grid item xs={12} md={6}>
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{
               type: "spring",
               stiffness: 100,
