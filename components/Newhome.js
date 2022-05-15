@@ -7,6 +7,7 @@ import { render } from "react-dom";
 import { motion, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import ReactAudioPlayer from "react-audio-player";
+import { isMobile } from "react-device-detect";
 
 const style = {
   position: "absolute",
@@ -23,7 +24,8 @@ const style = {
   textAlign: "center",
 };
 
-function Thehome() {
+function Thehome(props) {
+  const { loading = false } = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -53,8 +55,8 @@ function Thehome() {
             >
               <motion.div
                 className="container"
-                whileHover={{ scale: 1, rotate: 10 }}
-                whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
+                whileHover={{ scale: 1, scale: 1.3 }}
+                whileTap={{ scale: 0.8, scale: 0.8, borderRadius: "100%" }}
               >
                 <Link href="/about">
                   <Box sx={{ cursor: "pointer" }}>
@@ -150,10 +152,56 @@ function Thehome() {
               damping: 60,
             }}
           >
-            <Box sx={{ cursor: "pointer" }}>
+            {/* <Box sx={{ cursor: "pointer" }}>
               <Link href="/testing">
                 <img src="/skycube.gif" width="100%" alt="error"></img>
               </Link>
+            </Box> */}
+            <Box sx={{ textAlign: "center", width: "100%" }}>
+              <Grid container spacing={1}>
+                <Grid item xs={12} md={12}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 250,
+                      damping: 60,
+                    }}
+                  >
+                    {loading ? (
+                      <Skeleton
+                        variant="circular"
+                        width={200}
+                        height={200}
+                      ></Skeleton>
+                    ) : (
+                      <div>
+                        {" "}
+                        {isMobile ? (
+                          <Link href="/testing">
+                            <Box xs={{ cursor: "pointer" }}>
+                              <img
+                                src="/bonsai.gif"
+                                width={300}
+                                alt="error"
+                              ></img>
+                            </Box>
+                          </Link>
+                        ) : (
+                          <Link href="/testing">
+                            <img
+                              src="/bonsai.gif"
+                              width={700}
+                              alt="error"
+                            ></img>
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </motion.div>
+                </Grid>
+              </Grid>
             </Box>
           </motion.div>
         </Grid>
