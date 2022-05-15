@@ -4,7 +4,12 @@ import { Typography, Grid, Button, Modal, Stack } from "@mui/material";
 import { useRef } from "react";
 import { useState } from "react";
 import { render } from "react-dom";
-import { motion, MotionConfig } from "framer-motion";
+import {
+  motion,
+  useViewportScroll,
+  useTransform,
+  MotionConfig,
+} from "framer-motion";
 import Link from "next/link";
 import ReactAudioPlayer from "react-audio-player";
 import { isMobile } from "react-device-detect";
@@ -30,6 +35,7 @@ function Thehome(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const { scrollYProgress } = useViewportScroll();
 
   console.log(
     "%cSGVsbG8K, 48656C6C6F",
@@ -178,24 +184,22 @@ function Thehome(props) {
                       ></Skeleton>
                     ) : (
                       <div>
-                        {" "}
-                        {isMobile ? (
-                          <Link href="/testing">
+                        {/* {" "} */}
+                        {/* {isMobile ? ( */}
+                        <Link href="/testing">
+                          <Box width={"100%"}>
                             <img
                               src="/bonsai.gif"
-                              width={300}
+                              width={"100%"}
                               alt="error"
                             ></img>
-                          </Link>
-                        ) : (
-                          <Link href="/testing">
-                            <img
-                              src="/bonsai.gif"
-                              width={700}
-                              alt="error"
-                            ></img>
-                          </Link>
-                        )}
+                          </Box>
+                        </Link>
+                        {/* ) : ( */}
+                        {/* <Link href="/testing">
+                          <img src="/bonsai.gif" width={600} alt="error"></img>
+                        </Link> */}
+                        {/* )} */}
                       </div>
                     )}
                   </motion.div>

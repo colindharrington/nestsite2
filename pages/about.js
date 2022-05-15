@@ -70,7 +70,7 @@ function About(props) {
                   <div>
                     {" "}
                     {isMobile ? (
-                      <img src="/skycube.gif" width={300} alt="error"></img>
+                      <img src="/skycube.gif" width={200} alt="error"></img>
                     ) : (
                       <img src="/skycube.gif" width={600} alt="error"></img>
                     )}

@@ -13,6 +13,7 @@ export default function Home() {
           property="og:image"
           content="https://aphextwins.com/public/skycube.gif"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
         <Newhome />
