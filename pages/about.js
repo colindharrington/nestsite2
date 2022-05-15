@@ -6,6 +6,7 @@ import { MotionConfig } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { isMobile } from "react-device-detect";
 
 function About() {
   const { scrollYProgress } = useViewportScroll();
@@ -26,12 +27,14 @@ function About() {
                   damping: 60,
                 }}
               >
-                <img
-                  src="/bonsai.gif"
-                  minWidth={300}
-                  maxWidth={600}
-                  alt="error"
-                ></img>
+                <div>
+                  {" "}
+                  {isMobile ? (
+                    <img src="/bonsai.gif" width={200} alt="error"></img>
+                  ) : (
+                    <img src="/bonsai.gif" width={600} alt="error"></img>
+                  )}
+                </div>
               </motion.div>
             </Grid>
           </Grid>
