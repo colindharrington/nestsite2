@@ -47,7 +47,7 @@ function About(props) {
                     {isMobile ? (
                       <img src="/bonsai.gif" width={200} alt="error"></img>
                     ) : (
-                      <img src="/bonsai.gif" width={600} alt="error"></img>
+                      <img src="/bonsai.gif" width={700} alt="error"></img>
                     )}
                   </div>
                 )}
