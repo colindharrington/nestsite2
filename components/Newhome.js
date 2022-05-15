@@ -57,10 +57,11 @@ function Thehome() {
                 whileTap={{ scale: 0.8, rotate: -10, borderRadius: "100%" }}
               >
                 <Link href="/about">
-                  <Typography variant="h2" align="center">
-                    Welcome
-                  </Typography>
-                  {/* <Button> Welcome</Button> */}
+                  <Box sx={{ cursor: "pointer" }}>
+                    <Typography variant="h2" align="center">
+                      Welcome
+                    </Typography>
+                  </Box>
                 </Link>
               </motion.div>
             </motion.div>
