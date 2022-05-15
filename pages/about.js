@@ -62,13 +62,13 @@ function About(props) {
             alignItems={"center"}
           >
             <Link href="/">
-              <Button variant="outlined" color="secondary">
+              <Button variant="outlined" color="primary">
                 Back
               </Button>
             </Link>
 
             <Link href="/testing">
-              <Button variant="outlined" color="secondary">
+              <Button variant="outlined" color="primary">
                 Select
               </Button>
             </Link>

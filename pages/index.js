@@ -7,7 +7,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title> ˚∆˚ </title>
-
+        <link href="../asset/Kodchasan/Kodchasan-Medium.ttf" rel="stylesheet" />
         <meta name="title" content="* ˚∆˙ *"></meta>
         <meta
           property="og:image"
