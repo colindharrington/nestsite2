@@ -23,7 +23,32 @@ function About(props) {
   return (
     <div>
       <Box>
-        <Box sx={{ textAlign: "center", width: "100%" }}>
+        <Grid item xs={12} md={12}>
+          <Stack
+            sx={{ mt: 5 }}
+            direction={"row"}
+            justifyContent={"space-around"}
+            alignItems={"center"}
+          >
+            <Link href="/">
+              <Button variant="outlined" color="primary">
+                Back
+              </Button>
+            </Link>
+
+            <Link href="/testing">
+              <Button variant="outlined" color="primary">
+                Select
+              </Button>
+            </Link>
+            <Link href="/video">
+              <Button variant="outlined" color="primary">
+                Video
+              </Button>
+            </Link>
+          </Stack>
+        </Grid>
+        <Box sx={{ textAlign: "center", width: "100%", mt: 10 }}>
           <Grid container spacing={1}>
             <Grid item xs={12} md={12}>
               <motion.div
@@ -55,30 +80,7 @@ function About(props) {
             </Grid>
           </Grid>
         </Box>
-        <Grid item xs={12} md={12}>
-          <Stack
-            direction={"row"}
-            justifyContent={"space-around"}
-            alignItems={"center"}
-          >
-            <Link href="/">
-              <Button variant="outlined" color="primary">
-                Back
-              </Button>
-            </Link>
 
-            <Link href="/testing">
-              <Button variant="outlined" color="primary">
-                Select
-              </Button>
-            </Link>
-            <Link href="/video">
-              <Button variant="outlined" color="primary">
-                Video
-              </Button>
-            </Link>
-          </Stack>
-        </Grid>
         {/* <Grid item xs={12} md={12}>
             <motion.div
               initial={{ scale: 0.1 }}

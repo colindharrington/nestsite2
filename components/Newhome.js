@@ -12,9 +12,10 @@ import { isMobile } from "react-device-detect";
 const style = {
   position: "absolute",
   top: "50%",
-  left: "5%",
+  left: "2%",
   // transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 300,
+  outline: "none",
   // bgcolor: 'grey',
   color: "white",
   // border: '2px solid #000',
@@ -180,13 +181,11 @@ function Thehome(props) {
                         {" "}
                         {isMobile ? (
                           <Link href="/testing">
-                            <Box xs={{ cursor: "pointer" }}>
-                              <img
-                                src="/bonsai.gif"
-                                width={300}
-                                alt="error"
-                              ></img>
-                            </Box>
+                            <img
+                              src="/bonsai.gif"
+                              width={300}
+                              alt="error"
+                            ></img>
                           </Link>
                         ) : (
                           <Link href="/testing">
