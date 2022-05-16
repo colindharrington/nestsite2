@@ -10,13 +10,13 @@ import {
   BottomNavigationAction,
   Stack,
   Chip,
-  Link,
   Container,
 } from "@mui/material";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
+import Link from "next/link";
 
 function Fighter() {
   const [value, setValue] = React.useState(0);
