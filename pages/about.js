@@ -35,7 +35,11 @@ function About(props) {
                 Back
               </Button>
             </Link>
-
+            <Link href="https://sjunk.vercel.app/">
+              <Button variant="outlined" color="primary">
+                Other Site
+              </Button>
+            </Link>
             <Link href="/testing">
               <Button variant="outlined" color="primary">
                 Select
