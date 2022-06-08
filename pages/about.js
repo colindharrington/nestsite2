@@ -40,11 +40,16 @@ function About(props) {
                 Other Site
               </Button>
             </Link>
-            <Link href="/testing">
+            <Link href="https://privtool.vercel.app/">
+              <Button variant="outlined" color="primary">
+                Other Site 2
+              </Button>
+            </Link>
+            {/* <Link href="/testing">
               <Button variant="outlined" color="primary">
                 Select
               </Button>
-            </Link>
+            </Link> */}
             <Link href="/video">
               <Button variant="outlined" color="primary">
                 Video
